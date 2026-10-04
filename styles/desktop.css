@@ -1,0 +1,13 @@
+.desktop {
+    min-height: 100vh;
+}
+
+.environment {
+    min-height:100vh;
+    position: relative;
+}
+
+.desktop-surface {
+    min-height: 100vh;
+    position: relative;
+}
