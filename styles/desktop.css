@@ -1,5 +1,6 @@
 .desktop {
     min-height: 100vh;
+    position: relative;
 }
 
 .environment {
@@ -10,17 +11,26 @@
 .desktop-surface {
     min-height: 100vh;
     position: relative;
-    background-color: #17110d;
+    overflow: hidden;
     color: #d8c9b8;
     padding: 40px;
 }
 
+.chamber-background {
+    position: absolute;
+    inset: 0;
+    background-color: #17110d;
+    z-index: 0;
+}
+
 .topbar {
     position: relative;
+    z-index: 1;
 }
 
 .app-area {
     position: relative;
+    z-index: 1;
     display: flex;
     gap: 12px;
     margin-top: 30px;
@@ -31,9 +41,11 @@
     border: 1px solid #6f513b;
     background-color: #241a14;
     color: #d8c9b8;
+    cursor: pointer;
 }
 
 .workspace {
     position: relative;
     margin-top: 50px;
+    z-index: 1;
 }
