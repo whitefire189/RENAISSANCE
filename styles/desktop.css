@@ -20,6 +20,10 @@
     position: absolute;
     inset: 0;
     background-color: #17110d;
+    background-image: url("../assets/images/chamber.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: 0;
 }
 
