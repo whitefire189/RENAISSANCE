@@ -62,6 +62,30 @@ z-index: 2;
     cursor: pointer;
 }
 
+.lever-object {
+    left: 90.5%;
+    top: 25%;
+    width: 7%;
+    height: 27%;
+    background: transparent;
+}
+
+.diary-object {
+    left: 8%;
+    top: 76%;
+    width: 23.5%;
+    height: 13%;
+    background: transparent;
+}
+
+.globe-object {
+    left: 85%;
+    top: 58%;
+    width: 15%;
+    height: 37%;
+    background: transparent;
+}
+
 .topbar {
     position: relative;
     z-index: 1;
