@@ -27,6 +27,41 @@
     z-index: 0;
 }
 
+.chamber-objects {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.room-object { position: absolute;
+ background: transparent;
+ border: none;
+padding: 0;
+cursor: pointer;
+z-index: 2;
+}
+
+.clock-object {
+    left: 79%;
+    top: 13%;
+    width: 6%;
+    height: 51%;
+}
+
+.top-left-window-object {
+    position: absolute;
+    left: 25%;
+    top: 0%;
+    width: 12%;
+    height: 17%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
 .topbar {
     position: relative;
     z-index: 1;
