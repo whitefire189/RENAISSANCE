@@ -39,4 +39,45 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+  
+    // Make windows draggable by their title bars
+    document.querySelectorAll(".app-window").forEach((appWindow) => {
+        const titleBar = appWindow.querySelector(".window-titlebar");
+
+        if (!titleBar) return;
+
+        titleBar.addEventListener("pointerdown", (event) => {
+            if (event.target.closest("button")) return;
+
+            const startX = event.clientX;
+            const startY = event.clientY;
+            const startLeft = appWindow.offsetLeft;
+            const startTop = appWindow.offsetTop;
+
+            appWindow.style.transform = "none";
+            appWindow.style.left = `${startLeft}px`;
+            appWindow.style.top = `${startTop}px`;
+
+            titleBar.setPointerCapture(event.pointerId);
+
+            const moveWindow = (moveEvent) => {
+                appWindow.style.left =
+                    `${startLeft + moveEvent.clientX - startX}px`;
+                appWindow.style.top =
+                    `${startTop + moveEvent.clientY - startY}px`;
+            };
+
+            const stopMoving = () => {
+                titleBar.removeEventListener("pointermove", moveWindow);
+                titleBar.removeEventListener("pointerup", stopMoving);
+                titleBar.removeEventListener("pointercancel", stopMoving);
+            };
+
+            titleBar.addEventListener("pointermove", moveWindow);
+            titleBar.addEventListener("pointerup", stopMoving);
+            titleBar.addEventListener("pointercancel", stopMoving);
+        });
+    });
+
 });

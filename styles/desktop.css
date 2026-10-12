@@ -121,12 +121,13 @@ z-index: 2;
 }
 
 .app-window {
-    position: ansolute;
-    top: 12%;
+    position: absolute;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     width: min(760px, 85%);
-    max-height: 76%;
+    min-height: 320px;
+    max-height: 80%;
     overflow: auto;
     pointer-events: auto;
     color: #d8c9b8;
