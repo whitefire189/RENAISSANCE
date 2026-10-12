@@ -112,3 +112,52 @@ z-index: 2;
     margin-top: 50px;
     z-index: 1;
 }
+
+.window-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.app-window {
+    position: ansolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(760px, 85%);
+    max-height: 76%;
+    overflow: auto;
+    pointer-events: auto;
+    color: #d8c9b8;
+    background-color: #211811;
+    border: 1px solid #806044;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.65)
+}
+
+    .window-titlebar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 16px;
+        background: #38271b;
+        border-bottom: 1px solid #806044;
+
+    }
+
+    .window-titlebar h2 {
+        margin: 0;
+        font-size: 1.1rem; 
+    }
+
+    .window-close {
+        border: 1px solid #806044;
+        background: #211811;
+        color: #e8d7c4;
+        padding: 4px 10px;
+        cursor: pointer;
+    }
+
+    .window-content { padding: 20px;
+        }
