@@ -162,3 +162,21 @@ z-index: 2;
 
     .window-content { padding: 20px;
         }
+
+        
+.browser-view {
+    width: 100%;
+    height: 420px;
+    margin-top: 20px;
+    overflow: hidden;
+    border: 1px solid #6f513b;
+    background: #17110d;
+}
+
+.browser-view iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #ffffff;
+}

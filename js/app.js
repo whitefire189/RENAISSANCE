@@ -41,6 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   
+    //CONNECT gOOGLE SEARCh in globe window
+    
+    // Connect Google Search inside the Globe window
+    const searchForm = document.getElementById("google-search-form");
+    const searchInput = document.getElementById("google-search-input");
+    const searchFrame = document.getElementById("google-search-frame");
+
+    searchForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const query = searchInput?.value.trim();
+        if (!query || !searchFrame) return;
+
+        searchFrame.src =
+            "https://www.google.com/search?q=" +
+            encodeURIComponent(query);
+    });
+
+
+
     // Make windows draggable by their title bars
     document.querySelectorAll(".app-window").forEach((appWindow) => {
         const titleBar = appWindow.querySelector(".window-titlebar");

@@ -93,14 +93,29 @@
             <div class="window-content">
                 <p>Doorway to Pansophy...</p>
 
-                <form id="google-search-form">
-                    <label for="google-search-input">Search the archives</label>
-                    <div class="search-controls">
-                        <input type="search" id="google-search-input"
-                        placeholder="Seek your answers..." required>
-                        <button type="submit">🔍Find</button>
-                    </div>
-                </form>
+                
+<form id="google-search-form">
+    <label for="google-search-input">Search the archives</label>
+    <div class="search-controls">
+        <input
+            type="search"
+            id="google-search-input"
+            placeholder="Seek your answers..."
+            required
+        >
+        <button type="submit">🔍 Find</button>
+    </div>
+</form>
+
+<div class="browser-view">
+    <iframe
+        id="google-search-frame"
+        title="Search results"
+        src="about:blank"
+        referrerpolicy="no-referrer"
+    ></iframe>
+</div>
+
             </div>
         </section>
 
