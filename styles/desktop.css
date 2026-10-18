@@ -94,7 +94,7 @@ z-index: 2;
 .app-area {
     position: relative;
     z-index: 1;
-    display: fgitlex;
+    display: flex;
     gap: 12px;
     margin-top: 30px;
 }

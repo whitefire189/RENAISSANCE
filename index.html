@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Renaissance</title>
+
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/desktop.css">
 </head>
@@ -12,18 +15,37 @@
 <main class="desktop">
     <section class="environment">
         <div class="desktop-surface">
-            <div class="chamber-background"></div>
-            
-            <div class="chamber-objects">
-        <button class="room-object clock-object" aria-label="Clock"></button>
-        <button class="room-object top-left-window-object" aria-label="Top-left window"></button>
-        <button class="room-object lever-object" aria-label="Lever"></button>
-        <button class="room-object diary-object" aria-label="Diary"></button>
-        <button class="room-object globe-object" aria-label="Globe"></button>
 
+            <div class="chamber-background"></div>
+
+            <div class="chamber-objects">
+                <button
+                    class="room-object clock-object"
+                    aria-label="Clock">
+                </button>
+
+                <button
+                    class="room-object top-left-window-object"
+                    aria-label="Top-left window">
+                </button>
+
+                <button
+                    class="room-object lever-object"
+                    aria-label="Lever">
+                </button>
+
+                <button
+                    class="room-object diary-object"
+                    aria-label="Diary">
+                </button>
+
+                <button
+                    class="room-object globe-object"
+                    aria-label="Globe">
+                </button>
             </div>
-           
-        <header class="topbar">
+
+            <header class="topbar">
                 <h1>RENAISSANCE</h1>
             </header>
 
@@ -35,93 +57,217 @@
                 <button>Tools</button>
                 <button>Oakwood Library</button>
             </nav>
+
             <section class="workspace">
-            <h2>Welcome to RENAISSANCE</h2>
-            <p>Your experience of the medieval dark academia</p>
-        </section>
+                <h2>Welcome to RENAISSANCE</h2>
+                <p>Your experience of the medieval dark academia</p>
+            </section>
 
-        <section class="window-layer" id="window-layer">
-       <!-- CLOCK WINDOW-->
-        <section class="app-window clock-window" id="clock-window" hidden>
-            <header class="window-titlebar">
-                <h2>🕰️ Horologe </h2>
-                <button type="button" class="window-close"
-                data-close="clock-window" aria-label="Close clock">×</button>
-                </header>
-                <div class="window-content">
-                    <nav class="clock-tabs">
-                        <button type="button" data-clock-tab="time">Time</button>
-                        <button type="button" data-clock-tab="alarms">Alarms</button>
-                        <button type="button" data-clock-tab="stopwatch">Stopwatch</button>
-                    </nav>
-                    <section class="clock-panel" id="clock-time-panel">
-                        <p>Current time</p>
-                        <output id="live-clock">--:--:--</output>
-                        <p id="live-date"></p>
-                    </section>
+            <section class="window-layer" id="window-layer">
 
-                    <section class="clock-panel" id="clock-alarms-panel" hidden>
-                        <h3>Alarms</h3>
-                        <form id="alarm-form">
-                            <label for="alarm-time">Set an alarm</label>
-                            <input type="time" id="alarm-time" required>
-                            <button type="submit">Add alarm</button>
+                <!-- CLOCK WINDOW -->
+                <section
+                    class="app-window clock-window"
+                    id="clock-window"
+                    hidden>
+
+                    <header class="window-titlebar">
+                        <h2>🕰️ Horologe</h2>
+
+                        <button
+                            type="button"
+                            class="window-close"
+                            data-close="clock-window"
+                            aria-label="Close clock">
+                            ×
+                        </button>
+                    </header>
+
+                    <div class="window-content">
+
+                        <nav class="clock-tabs">
+                            <button
+                                type="button"
+                                data-clock-tab="time">
+                                Time
+                            </button>
+
+                            <button
+                                type="button"
+                                data-clock-tab="world">
+                                🌍 World Clocks
+                            </button>
+
+                            <button
+                                type="button"
+                                data-clock-tab="alarms">
+                                Alarms
+                            </button>
+
+                            <button
+                                type="button"
+                                data-clock-tab="stopwatch">
+                                Stopwatch
+                            </button>
+                        </nav>
+
+                        <!-- TIME PANEL -->
+                        <section
+                            class="clock-panel"
+                            id="clock-time-panel">
+
+                            <p>Current time</p>
+                            <output id="live-clock">--:--:--</output>
+                            <p id="live-date"></p>
+                        </section>
+
+                        <!-- ALARMS PANEL -->
+                        <section
+                            class="clock-panel"
+                            id="clock-alarms-panel"
+                            hidden>
+
+                            <h3>Alarms</h3>
+
+                            <form id="alarm-form">
+                                <label for="alarm-time">
+                                    Set an alarm
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="alarm-time"
+                                    required>
+
+                                <button type="submit">
+                                    Add alarm
+                                </button>
+                            </form>
+
+                            <ul id="alarm-list"></ul>
+
+                            <p id="alarm-status" role="status"></p>
+                        </section>
+
+                        <!-- STOPWATCH PANEL -->
+                        <section
+                            class="clock-panel"
+                            id="clock-stopwatch-panel"
+                            hidden>
+
+                            <h3>Stopwatch</h3>
+
+                            <output id="stopwatch-display">
+                                00:00.0
+                            </output>
+
+                            <div class="stopwatch-controls">
+                                <button
+                                    type="button"
+                                    id="stopwatch-start">
+                                    Start
+                                </button>
+
+                                <button
+                                    type="button"
+                                    id="stopwatch-reset">
+                                    Reset
+                                </button>
+                            </div>
+                        </section>
+
+                        <!-- WORLD CLOCKS PANEL -->
+                        <section
+                            class="clock-panel"
+                            id="clock-world-panel"
+                            hidden>
+
+                            <h3>🌍 World Clocks</h3>
+
+                            <p>Keep track of time across this realm.</p>
+
+                            <label for="world-clock-search">
+                                Find a city or country
+                            </label>
+
+                            <input
+                                type="search"
+                                id="world-clock-search"
+                                placeholder="Try Edinburgh..."
+                                autocomplete="off">
+
+                            <div id="world-clock-results"></div>
+
+                            <h3>Your Horologes</h3>
+
+                            <div id="world-clock-list"></div>
+
+                            <p
+                                id="world-clock-status"
+                                role="status">
+                            </p>
+                        </section>
+
+                    </div>
+                </section>
+
+                <!-- GLOBE WINDOW -->
+                <section
+                    class="app-window globe-window"
+                    id="globe-window"
+                    hidden>
+
+                    <header class="window-titlebar">
+                        <h2>🌐 Encyclopedia &amp; Globe</h2>
+
+                        <button
+                            type="button"
+                            class="window-close"
+                            data-close="globe-window"
+                            aria-label="Close search">
+                            ×
+                        </button>
+                    </header>
+
+                    <div class="window-content">
+
+                        <p>Doorway to Pansophy...</p>
+
+                        <form id="google-search-form">
+                            <label for="google-search-input">
+                                Search the archives
+                            </label>
+
+                            <div class="search-controls">
+                                <input
+                                    type="search"
+                                    id="google-search-input"
+                                    placeholder="Seek your answers..."
+                                    required>
+
+                                <button type="submit">
+                                    🔍 Find
+                                </button>
+                            </div>
                         </form>
-                        <ul id="alarm-list"></ul>
-                        <p id="alarm-status" role="status"></p>
-                    </section>
 
-                    <section class="clock-panel" id="clock-stopwatch-panel" hidden>
-                        <h3>Stopwatch</h3>
-                        <output id="stopwatch-display">00:00.0</output>
-                        <div class="stopwatch-controls">
-                            <button type="button" id="stopwatch-start">Start</button>
-                            <button type="button" id="stopwatch-reset">Reset</button>
+                        <div class="browser-view">
+                            <iframe
+                                id="google-search-frame"
+                                title="Search results"
+                                src="about:blank"
+                                referrerpolicy="no-referrer">
+                            </iframe>
                         </div>
-                    </section>
 
-                </div>
-        </section>
+                    </div>
+                </section>
 
-        <!--Globe Window-->
-        <section class="app-window globe-window" id="globe-window" hidden>
-            <header class="window-titlebar">
-                <h2>🌐 Encyclopedia & Globe</h2>
-                <button type="button" class="window-close"
-                data-close="globe-window" aria-label="Close search"></button>
-            </header>
-            <div class="window-content">
-                <p>Doorway to Pansophy...</p>
-
-                
-<form id="google-search-form">
-    <label for="google-search-input">Search the archives</label>
-    <div class="search-controls">
-        <input
-            type="search"
-            id="google-search-input"
-            placeholder="Seek your answers..."
-            required
-        >
-        <button type="submit">🔍 Find</button>
-    </div>
-</form>
-
-<div class="browser-view">
-    <iframe
-        id="google-search-frame"
-        title="Search results"
-        src="about:blank"
-        referrerpolicy="no-referrer"
-    ></iframe>
-</div>
-
-            </div>
-        </section>
-
+            </section>
         </div>
     </section>
 </main>
+
 <script src="js/app.js"></script>
 </body>
 </html>
