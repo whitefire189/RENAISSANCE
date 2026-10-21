@@ -20,7 +20,7 @@
     position: absolute;
     inset: 0;
     background-color: #17110d;
-    background-image: url("../assets/images/chamber.png");
+    background-image: url("../assets/images/chamber2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,18 +43,19 @@ z-index: 2;
 }
 
 .clock-object {
-    left: 79%;
-    top: 13%;
+    left: 47%;
+    top: 18%;
     width: 6%;
-    height: 51%;
+    height: 10%;
+    background: transparent;
 }
 
-.top-left-window-object {
+.top-window-object {
     position: absolute;
-    left: 25%;
-    top: 0%;
-    width: 12%;
-    height: 17%;
+    left: 45%;
+    top: 24%;
+    width: 10%;
+    height: 35%;
     background: transparent;
     border: none;
     outline: none;
@@ -79,10 +80,10 @@ z-index: 2;
 }
 
 .globe-object {
-    left: 85%;
-    top: 58%;
-    width: 15%;
-    height: 37%;
+    left: 74.5%;
+    top: 43%;
+    width: 5%;
+    height: 12%;
     background: transparent;
 }
 
