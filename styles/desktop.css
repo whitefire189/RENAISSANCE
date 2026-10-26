@@ -44,7 +44,7 @@ z-index: 2;
 
 .clock-object {
     left: 47%;
-    top: 18%;
+    top: 19%;
     width: 6%;
     height: 10%;
     background: transparent;
@@ -64,10 +64,10 @@ z-index: 2;
 }
 
 .lever-object {
-    left: 90.5%;
-    top: 25%;
+    left: 21%;
+    top: 31%;
     width: 7%;
-    height: 27%;
+    height: 37%;
     background: transparent;
 }
 
@@ -111,7 +111,7 @@ z-index: 2;
 .workspace {
     position: relative;
     margin-top: 50px;
-    z-index: 1;
+    z-index: 0;
 }
 
 .window-layer {
@@ -169,15 +169,96 @@ z-index: 2;
     width: 100%;
     height: 420px;
     margin-top: 20px;
-    overflow: hidden;
-    border: 1px solid #6f513b;
-    background: #17110d;
+    padding: 16px;
+    overflow-y: auto;
+    border: 1px solid #66513d;
+    background: #17120f;
+    color: #e8dcc8;
 }
 
-.browser-view iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: #ffffff;
+.search-controls {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
 }
+
+.search-controls inputs {
+    flex: 1;
+    min-width: 0;
+}
+
+#google-search-status {
+    margin-top: 12px;
+    color: #c9b79c;
+}
+
+.globe-result {
+    padding: 12px 0;
+    border-bottom: 1px solid #49392c;
+}
+
+.globe-result a {
+    color: #d9b783;
+    text-decoration: none;
+}
+
+.globe-result a:hover {
+    text-decoration: underine;
+}
+
+.globe-results p {
+    margin-top: 6px;
+    color: #c9c0b4;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.globe-result small {
+    display: block;
+    margin-top: 5px;
+    color: #a99a84;
+    font-size: 0.8rem;
+    overflow-wrap: anywhere;
+}
+
+
+.local-clock {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 36px 20px;
+
+    background: linear-gradient(145deg, #493222, #302116);
+    border: 1px solid #76563b;
+    border-radius: 12px;
+    box-shadow:
+        inset 0 1px 0 rgba(220, 185, 140, 0.10),
+        0 5px 14px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+}
+
+#local-time-display {
+    margin: 0;
+    font-size: clamp(3.5rem, 9vw, 6.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0.045em;
+    font-variant-numeric: tabular-nums;
+    color: #f0dfc4;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+#local-time-status {
+    margin: 0;
+    color: #c7ad8c;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
